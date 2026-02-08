@@ -6,3 +6,11 @@ I have bought these from RS-online and should be available there for some time. 
 The mother station will be a raspberry pi zero listening in with the same kind of lora radiocard as the others.
 
 BOM:
+4 uv sensor card:                           ADAFRUIT INDUSTRIES Breakout Module UV B Breakout Module for Analog UV light Sensor Breakout
+4 temperature and barometric pressure card: MikroElektronika Pressure 5 Click Pressure Sensor for BMP388 Battery-Powered and Portable Applications
+5 LoRa radio card:                          Seeed Studio Low Power Long Range Transceiver Module -148 dBm Receiver Sensitivity
+4 raspberry pi pico (1):                    Raspberry Pi Raspberry Pi Pico - Reel of 480 Raspberry Pi Pico 264 kB
+1 raspberry pi zero:                        Raspberry Pi RPI-ZERO-W 1.1 Raspberry Pi ZeroW 512 MB
+some wires to solder things together and as antennas
+some 3d printer filament to print the inner housing
+4 glass jars with metal lids and some kind of enclosure for the zero
