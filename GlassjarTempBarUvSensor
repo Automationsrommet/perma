@@ -1,0 +1,8 @@
+This project is not running yet, but when it does, it is meant to be openly available for copying.
+
+A glass jar housing battery-powered microcontroller with high-end barometric and temperature sensor on one separate small card and analogue UV sensor on another small card.
+A third small LoRa radio card will send sensor data to a listening raspberry pi computer once a day, and my garden will have four of these sensor stations placed about.
+I have bought these from RS-online and should be available there for some time. Microcontroller of choice is the raspberry pi pico without wifi chip.
+The mother station will be a raspberry pi zero listening in with the same kind of lora radiocard as the others.
+
+BOM:
