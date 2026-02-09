@@ -1,0 +1,15 @@
+Hent kart til 3D-modell på høydedata.no
+
+Slik gjør du:
+
+Gå til høydedata.no
+Naviger til utsnittet du vil fange
+Trykk eksporter og sørg for å få det i punktsky med filetternavnet .laz
+Man får mail etter en stund, kanskje en dag, med zipfil med .laz-filen inni et sted.
+
+Pakk ut .zip-filen på en pc med windows.
+Gå til lastools.org og finn download-siden deres nederst.
+Last ned en .zip igjen, pakk den ut et lagelig sted
+Flytt .laz-filen din til samme katalog
+Kjør lazview og "browse" fram .laz-filen din.
+Trykk på "View"-knappen og se dataene.
