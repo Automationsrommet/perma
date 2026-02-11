@@ -1,0 +1,52 @@
+Gratis måte å få 3D-modell fra høydedata.no over et område vi velger selv.
+
+Slik gjør du:
+
+Gå til høydedata.no
+Naviger til utsnittet du vil fange
+Trykk eksporter og sørg for å få det i punktsky med filetternavnet .laz
+Man får epost etter en stund, kanskje en dag, med zip-fil med .laz-filen inni et sted.
+Pakk ut .zip-filen på en pc med windows.
+
+Lese kart-filen:
+
+Gå til lastools.org og finn download-siden deres nederst.
+Last ned en .zip for windows-pc, pakk den ut et lagelig sted
+Flytt .laz-filen din til katalogen LAStool/bin for der er lazview-programmet vi skal bruke.
+Kjør lazview, får opp det grå brukergrensenittet og "browse" fram .laz-filen din.
+Du må dobbeltklokke på .laz-filen slik at du får en blå firkant i midtvinduet.
+Trykk på "View"-knappen og se dataene. Vi må vel trykke "start" på en liten grå meny også.
+Nå ser vi kartet vårt rett ovenfra. Her kan vi snu og studere modellen, men ikke gjør det, ikke ennå, i det minste.
+Høyreklikk i stedet og velg "color by elevation" fra mørke til lyse farger, det øverste av de farge-høyde-alternativene.
+Du kan også godt sette bakgrunnsfargen til sort med høyreklikk-menyen. 
+Velg også gjerne større punkter på punktskyen fra høyreklikk-menyen, da blir modellen mindre hullete.
+Så trykker vi knappekombinasjonen "Windowstast" + "Shift" + "S" for å kopiere et området av skjermen.
+Velg akkurat det kartområdet du vil ha, kanskje alt inni den grønne tynne firkantlinjen. Trykk enter.
+
+Klargjøre til 3D-modell:
+
+Nå har datamaskinen et bilde i minnet sitt. 
+Vi velger en katalog, for eksempel "Bilder" og høyreklikker på bakgrunnen der. 
+Velg "ny" og "punktgrafikkbilde" og gi den nye filen et passelig navn, for eksempel "hagen.bmp".
+Åpne den tomme bildefilen i programmet "Paint", tidligere kjent som "MS Paint", en klassiker fra 1990-tallet.
+Der inne i programmet trykker vi "Ctrl" + "V" for å lime inn fra datamaskinens minne.
+Så trykker vi "Ctrl" + "S" for å lagre bildet med innhold.
+Videre må vi lagre bildet igjen i et annet filformat.
+Vi velger "Fil", "Lagre som" og velger .png-etternavnet slik at vi har en ny bildefil som kanskje nå heter "hagen.png".
+
+3D-programmet:
+Nå skaffer vi oss et nytt gratis program som heter OpenScad.
+Gå til nettsiden openscad.org, finn download, og velg "download for Windows". 
+De fleste har 64-bits operativsystem, så øverste alternativ vil gjelde.
+Kjør installasjonsfila som er lastet ned, velg hvor programmet skal være, eller behold de forhåndsvalgte plasseringene.
+Åpne programmet OpenScad og lagre et nytt tomt dokument i samme katalog som bildet med -png-etternavn.
+
+Bruk følgende kode, hentet fra eksempel-samlingen "cheat sheet":
+
+scale([1, 1, 0.4])
+  surface(file = "hagen.png", center = true, invert = false);
+
+Trykk "render" eller tasten F6. Nå må vi sannsynligvis vente lenge, avhengig av hvor stor og hvor detaljert kart-filen er.
+"hagen.png" byttes ut med det din bildefil heter, filetternavnet må være .png og anførselstegnene "" må være med.
+Tallet 0.4 i koden representerer høyden på 3D-kartet. Hvis bakkene er for bratte, velg et mindre tall her. Er de for slake, velg et større tall.
+Dette er ingen god eller veldig nøyaktig måte å gjøre dette på, men det er kostnadsfritt, bra nok for min hage, og jeg er stolt av at jeg fikk det til.
