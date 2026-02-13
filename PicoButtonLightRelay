@@ -172,7 +172,7 @@ cylinder(1,6.5,7,center=false);
 }
 module lys(){
 cylinder(11,3,6,center=false);
-translate([0,0,6.5])sphere(5);
+translate([0,0,6.4])sphere(5);
 }
 module stotter(){
 for(o=[0:1:kolonner-1])
