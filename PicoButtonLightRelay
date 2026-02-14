@@ -24,7 +24,8 @@ printplate();
 module printplate(){
 difference(){
 union(){
-//color("white")translate([0,0,])cube([140,140,1],center=false);
+//color("white")translate([0,0,0])cube([140,140,0.1],center=false);
+translate([130,70,11.8])kilen();
 translate([43,30,21]){
  hus();
  stotter();
@@ -253,7 +254,7 @@ translate([-28,kolonner/2*bredde-bredde/2+rund/2-7/2,-3-5])cube([18,kolonner*bre
 //dekselskruer();
 for(r=[-1:2:1]){
 translate([-10,kolonner/2*bredde-bredde/2+rund/2-7/2+2+r*32+r*7/2+r*kolonner/2*bredde-r*bredde+r*rund/2-r*8,-12-3])cylinder(10,1.5,1,center=true,$fn=5);
-translate([-10,kolonner/2*bredde-bredde/2+rund/2-7/2+2+r*32+r*7/2+r*kolonner/2*bredde-r*bredde+r*rund/2-r*8,-18.6])cylinder(6,1,2,center=true);
+translate([-10,kolonner/2*bredde-bredde/2+rund/2-7/2+2+r*32+r*7/2+r*kolonner/2*bredde-r*bredde+r*rund/2-r*7,-18.8])cylinder(4.5,1.7,3,center=true);
 }
 spor();
 //dekselskruer();
@@ -284,7 +285,7 @@ cube([9,kolonner*bredde+bredde/2+rund-2,1.9],center=true);
 }
 module kilen(){
 translate([0,0,-11.3])
-cube([7,50,1],center=true);
+cube([7,(bredde+1)*kolonner,1],center=true);
 }
 module knappeplass(){
 translate([0,0,-14])
