@@ -173,7 +173,7 @@ cylinder(1,6.5,7,center=false);
 }
 module lys(){
 cylinder(11,3,6,center=false);
-translate([0,0,6.4])sphere(5);
+translate([0,0,10.7])scale([1,1,0.1])sphere(5);
 }
 module stotter(){
 for(o=[0:1:kolonner-1])
@@ -260,12 +260,21 @@ spor();
 //dekselskruer();
 pico();
 rele();
-
+for(m=[0:1:kolonner])
+translate([-50,-7+m*16,-15])rotate([0,90,0])cylinder(20,2,2,$fn=6);
+translate([-35,-7+30,-20])cube([5,76,2],center=true);
 translate([0,kolonner/2*bredde-bredde/2+rund/2-7/2,-15-22-12-3])cube([70+100,50+100,42+20],center=true);
 translate([-10,kolonner/2*bredde-bredde/2+rund/2,-15-22-12])cube([60,kolonner*bredde+bredde/2+rund+2,42+20],center=true);
 for(k=[-rader/2+1/2:1:rader/2])
 translate([k*(bredde+2)-3+10,5,0])kile();
 
+}
+difference(){
+for(n=[0:1:kolonner])
+translate([-35,-7+n*16,-18])cube([10,5,6],center=true);
+for(o=[0:1:kolonner])
+translate([-50,-7+o*16,-15])rotate([0,90,0])cylinder(20,2,2,$fn=6);
+translate([-35,-7+30,-20])cube([5,76,2],center=true);
 }
 }
 
