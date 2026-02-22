@@ -20,7 +20,46 @@ rader=1;
 //deksel();
 //stotter();
 //lyskort();
+//tpuplate();
 printplate();
+module tpuplate(){
+
+translate([0,-25,0])cube([19,1,5],center=false);
+translate([2,-27,2])cube([7,3,1],center=false);
+difference(){
+hull(){
+translate([19,-22,3])rotate([0,90,0])
+cylinder(3,3,3,center=false);
+translate([19,-22,7])rotate([0,90,0])
+cylinder(3,3,3,center=false);
+}
+hull(){
+translate([19,-22,3])rotate([0,90,0])
+cylinder(2,2,2,center=false);
+translate([19,-22,7])rotate([0,90,0])
+cylinder(2,2,2,center=false);
+}
+}
+
+translate([2,-27,0])cube([0.5,0.5,2],center=false);
+translate([8.5,-27,0])cube([0.5,0.5,2],center=false);
+translate([21.5,-25,0])cube([0.5,0.5,2],center=false);
+translate([21.5,-19.5,0])cube([0.5,0.5,2],center=false);
+difference(){
+linear_extrude(3)
+projection(cut=false)
+translate([0,0,24])hus();
+translate([-35,-12,1])cube([50,(bredde+1)*(kolonner),2],center=false);
+echo((bredde+1)*(kolonner));
+echo("ganger femti");
+}
+difference(){
+linear_extrude(1)
+projection(cut=false)
+translate([65,0,24])hus();
+translate([55,bredde*(kolonner-1)/2,0])cube([14,20,100],center=true);
+}
+}
 module printplate(){
 difference(){
 union(){
