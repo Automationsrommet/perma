@@ -5,16 +5,16 @@ Slik gjør du:
 Gå til høydedata.no
 Naviger til utsnittet du vil fange
 Trykk eksporter og sørg for å få det i punktsky med filetternavnet .laz
-Man får epost etter en stund, kanskje en dag, med zip-fil med .laz-filen inni et sted.
+Man får epost etter en stund, kanskje en dag, med zip-fil med .laz-filen(e) inni et sted.
 Pakk ut .zip-filen på en pc med windows.
 
 Lese kart-filen:
 
 Gå til lastools.org og finn download-siden deres nederst.
 Last ned en .zip for windows-pc, pakk den ut et lagelig sted
-Flytt .laz-filen din til katalogen LAStool/bin for der er lazview-programmet vi skal bruke.
+Flytt .laz-filen din eller -filene til katalogen LAStool/bin for der er lazview-programmet vi skal bruke.
 Kjør lazview, får opp det grå brukergrensenittet og "browse" fram .laz-filen din.
-Du må dobbeltklokke på .laz-filen slik at du får en blå firkant i midtvinduet.
+Du må dobbeltklokke på .laz-filen slik at du får en blå firkant i midtvinduet. Eller du kan bruke "Add *.laz"-knappen.
 Trykk på "View"-knappen og se dataene. Vi må vel trykke "start" på en liten grå meny også.
 Nå ser vi kartet vårt rett ovenfra. Her kan vi snu og studere modellen, men ikke gjør det, ikke ennå, i det minste.
 Høyreklikk i stedet og velg "color by elevation" fra mørke til lyse farger, det øverste av de farge-høyde-alternativene.
