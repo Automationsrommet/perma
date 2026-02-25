@@ -2,7 +2,7 @@ This project is not running yet, but when it does, it is meant to be openly avai
 
 A glass jar housing battery-powered microcontroller with high-end barometric and temperature sensor on one separate small card and analogue UV sensor on another small card.
 A third small LoRa radio card will send sensor data to a listening raspberry pi computer once a day, and my garden will have four of these sensor stations placed about.
-I have bought these from RS-online and should be available there for some time. Microcontroller of choice is the raspberry pi pico without wifi chip.
+I have bought these from RS-online and should be avalable there for some time. Microcontroller of choice is the raspberry pi pico without wifi chip. These are really inexpensive at the moment as they are discontinued.
 The mother station will be a raspberry pi zero listening in with the same kind of lora radiocard as the others.
 
 BOM:
@@ -13,4 +13,4 @@ BOM:
 1 raspberry pi zero:                        Raspberry Pi RPI-ZERO-W 1.1 Raspberry Pi ZeroW 512 MB
 some wires to solder things together and as antennas
 some 3d printer filament to print the inner housing
-4 glass jars with metal lids and some kind of enclosure for the zero
+4 glass jars with metal lids and some kind of enclosure for the zero mother station. This will be powered from the house, as it uses a lot more current than those microcontrollers.
