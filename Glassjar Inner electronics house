@@ -22,7 +22,7 @@ translate([12,15.5,35])rotate([90,0,180])linear_extrude(3)text("Logger",5);
 translate([12,15.5,26])rotate([90,0,180])linear_extrude(3)text("UV-lys",5);
 translate([12,15.5,17])rotate([90,0,180])linear_extrude(3)text("Trykk",5);
 translate([12,15.5,8])rotate([90,0,180])linear_extrude(3)text("Temp",5);
-translate([12,15,0])rotate([90,0,180])linear_extrude(3)text("via LoRa",4);
+translate([12,14.3,0])rotate([90,0,180])linear_extrude(3)text("via LoRa",4);
 }
 
 module hus(){
@@ -52,6 +52,7 @@ color("brown"){
 translate([0,-23,25])sphere(6,$fn=6);
 translate([-5,-23,47])sphere(4,$fn=6);
 translate([-14,-2,15])rotate([0,0,0])cube([3,30,20],center=true);
+translate([-16,-17,20])rotate([0,0,0])cube([7,9,3],center=true);
 translate([-15,-5,40])rotate([0,0,0])cube([3,30,10],center=true);
 translate([13,-16,35])rotate([0,0,0])cube([6,8,40],center=true);
 translate([8,-16,55])rotate([0,0,0])cube([12,8,6],center=true);
@@ -92,7 +93,7 @@ module radio(){
 color("silver")translate([-17,10,45])cylinder(15,3,3);
 translate([-17,0,40])
 rotate([0,90,0])
-color("blue")cube([17,17,2],center=true);
+color("blue")cube([18,17,2],center=true);
 }
 
 module UV(){
