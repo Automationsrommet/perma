@@ -1,0 +1,130 @@
+import machine
+import utime
+knapp1idag=1
+knapp2idag=1
+knapp3idag=1
+knapp4idag=1
+knapp5idag=1
+knapp1igar=1
+knapp2igar=1
+knapp3igar=1
+knapp4igar=1
+knapp5igar=1
+knapp1teller=0
+knapp2teller=0
+knapp3teller=0
+knapp4teller=0
+knapp5teller=0
+grense=2
+
+knapp1 = machine.Pin(0, machine.Pin.IN, machine.Pin.PULL_UP)
+knapp2 = machine.Pin(1, machine.Pin.IN, machine.Pin.PULL_UP)
+knapp3 = machine.Pin(2, machine.Pin.IN, machine.Pin.PULL_UP)
+knapp4 = machine.Pin(3, machine.Pin.IN, machine.Pin.PULL_UP)
+knapp5 = machine.Pin(4, machine.Pin.IN, machine.Pin.PULL_UP)
+lys1 = machine.Pin(5, machine.Pin.OUT)
+lys2 = machine.Pin(6, machine.Pin.OUT)
+lys3 = machine.Pin(7, machine.Pin.OUT)
+lys4 = machine.Pin(8, machine.Pin.OUT)
+lys5 = machine.Pin(9, machine.Pin.OUT)
+rele1 = machine.Pin(10, machine.Pin.OUT)
+rele2 = machine.Pin(11, machine.Pin.OUT)
+rele3 = machine.Pin(12, machine.Pin.OUT)
+rele4 = machine.Pin(13, machine.Pin.OUT)
+rele5 = machine.Pin(14, machine.Pin.OUT)
+lys1.value(1)
+rele1.value(1)
+lys2.value(1)
+rele2.value(1)
+lys3.value(1)
+rele3.value(1)
+lys4.value(1)
+rele4.value(1)
+lys5.value(1)
+rele5.value(1)
+while True:
+    knapp1idag = knapp1.value()
+    knapp2idag = knapp2.value()
+    knapp3idag = knapp3.value()
+    knapp4idag = knapp4.value()
+    knapp5idag = knapp5.value()
+    if knapp1idag==0:
+        if knapp1igar==1:
+            knapp1teller += 1
+            lys1.value(0)
+            rele1.value(0)
+            if knapp1teller==1:
+                print("En På")
+            utime.sleep(0.25)
+    if knapp1idag==0:
+        if knapp1teller == grense:
+            lys1.value(1)
+            rele1.value(1)
+            print("En Av")
+            knapp1teller=0;
+            utime.sleep(0.25)
+    if knapp2idag==0:        
+        if knapp2igar==1:
+            knapp2teller += 1
+            lys2.value(0)
+            rele2.value(0)
+            if knapp2teller == 1:
+                print("To På")
+            utime.sleep(0.25)
+    if knapp2idag==0:        
+        if knapp2teller==grense:
+            lys2.value(1)
+            rele2.value(1)
+            print("To Av")
+            knapp2teller=0;
+            utime.sleep(0.25)
+    if knapp3idag==0:
+        if knapp3igar==1:
+            knapp3teller += 1
+            lys3.value(0)
+            rele3.value(0)
+            if knapp3teller == 1:
+                print("Tre på")
+            utime.sleep(0.25)
+    if knapp3idag==0:
+        if knapp3teller == grense:
+            lys3.value(1)
+            rele3.value(1)
+            print("Tre AV")
+            knapp3teller=0;
+            utime.sleep(0.25)
+    if knapp4idag==0:
+        if knapp4igar==1:
+            knapp4teller += 1
+            lys4.value(0)
+            rele4.value(0)
+            if knapp4teller == 1:
+                print("Fire på")
+            utime.sleep(0.25)
+    if knapp4idag==0:
+        if knapp4teller == grense:
+            lys4.value(1)
+            rele4.value(1)
+            print("Fire AV")
+            knapp4teller=0;
+            utime.sleep(0.25)
+    if knapp5idag==0:
+        if knapp5igar==1:
+            knapp5teller += 1
+            lys5.value(0)
+            rele5.value(0)
+            if knapp5teller == 1:
+                print("Fem på")
+            utime.sleep(0.25)
+    if knapp5idag==0:
+        if knapp5teller == grense:
+            lys5.value(1)
+            rele5.value(1)
+            print("Fem AV")
+            knapp5teller=0;
+            utime.sleep(0.25)
+    knapp1igar=knapp1idag
+    knapp2igar=knapp2idag
+    knapp3igar=knapp3idag
+    knapp4igar=knapp4idag
+    knapp5igar=knapp5idag
