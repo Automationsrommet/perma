@@ -59,11 +59,11 @@ while True:
             knapp2teller += 1
             lys2.value(0)
             rele2.value(0)
-            if knapp2teller == grense:
+            if knapp2teller == 1:
                 print("To På")
             utime.sleep(0.25)
     if knapp2idag==0:        
-        if knapp2teller==2:
+        if knapp2teller==grense:
             lys2.value(1)
             rele2.value(1)
             print("To Av")
@@ -95,7 +95,7 @@ while True:
     if knapp4idag==0:
         if knapp4teller == grense:
             lys4.value(1)
-            rele3.value(1)
+            rele4.value(1)
             print("Fire AV")
             knapp4teller=0;
             utime.sleep(0.25)
