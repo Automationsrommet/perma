@@ -27,8 +27,8 @@ $fn=detail;
 //ringdisc();
 //bolt();
 //labels();
-//bakplate();
-bryter();
+bakplate();
+//bryter();
 //kanaler();
 
 module bakplate(){
@@ -44,8 +44,9 @@ for(b=[-1:2:1])
 translate([105/2+a*46,(boltcount*distance-5)/2+b*55,10])
 rotate([0,180,0])
 pappspiker();
-translate([105/2,(boltcount*distance-5)/2,19])
+translate([105/2,(boltcount*distance-5)/2,19.5])
 linear_extrude(29)oshw_logo_2d(90);
+labels();
 }
 }
 module kanaler(){
@@ -60,7 +61,11 @@ cylinder(6,4.5,2.5,center=false);
 
 }
 for (b=[0:distance:distance*boltcount-2*distance]){
-translate([40,(boltcount-1.5)*distance-b,boltheadlength])bryter();
+translate([40,(boltcount-1.5)*distance-b,boltheadlength])
+translate([0,20,15])
+rotate([130,0,-20])
+translate([0,0,-1])
+pappspiker();
 translate([40,(boltcount-1.5)*distance-b,boltheadlength])bryterhull();
 translate([10,(boltcount-2)*distance-b+10,boltheadlength])
 rotate([-80,0,-25])cylinder(23,1.5,1.5,center=false);
@@ -70,6 +75,8 @@ translate([20,(boltcount-2)*distance-b+15,0])
 rotate([-45,0,-45])cylinder(18,1.5,1.5,center=false);
 translate([20,(boltcount-2)*distance-b+15,0])
 rotate([-45,0,-05])cylinder(18,1.5,1.5,center=false);
+
+
 
 for(d=[-90:5:90])
   translate([32,(boltcount-1)*distance-b+11,15])rotate([-120,0,55])
@@ -235,24 +242,14 @@ translate([0,4,0])color("red")labels();
 
 }
     module labels(){
-      translate([-15,-3,heigth])linear_extrude(2)text("MF 135",6);  
-        translate([-15,-12,heigth])linear_extrude(2)text("12 VOLT",5);
-       translate([-15,-24,heigth])linear_extrude(2)text("Elektrisk",5);         
-       translate([-15,-34,heigth])linear_extrude(2)text("lyskobling",5);
-       translate([-0,-59,heigth])linear_extrude(height=2)oshw_logo_2d(25);
-       translate([-15,-79,heigth])linear_extrude(2)text("OPEN",8);        
-       translate([-15,-85,heigth])linear_extrude(2)text("HARDWARE",4);
-
-       translate([distance,-134,1])rotate([90,0,90])linear_extrude(2)text("AUTOMATIONSROMMET @ GITHUB",6); 
-
-       translate([-12,3,innerheigth])linear_extrude(2)text("Jording",5); 
-       translate([-15,-12,innerheigth])linear_extrude(2)text("Innfeste",5); 
-       translate([-14,-23,innerheigth])linear_extrude(2)text("12 VOLT",5);        
-       translate([-14,-23-distance,innerheigth])linear_extrude(2)text("LANGLYS",5);        
-       translate([-14,-23-2*distance,innerheigth])linear_extrude(2)text("NÆRLYS",5);        
-       translate([-14,-23-3*distance,innerheigth])linear_extrude(2)text("VINSJ UT",5);        
-       translate([-14,-23-4*distance,innerheigth])linear_extrude(2)text("VINSJ INN",5);
-
+    color("white"){
+      translate([15,1,11])rotate([90,0,0])linear_extrude(2)text("MF135 12 VOLT",5);
+       translate([15,1,4])rotate([90,0,0])linear_extrude(2)text("Elektrisk lyskobling",4);
+       translate([75,1,9])rotate([90,0,0])linear_extrude(height=2)oshw_logo_2d(17);
+     
+       translate([1,109,11])rotate([90,0,-90])linear_extrude(2)text("AUTOMATIONSROMMET",6); 
+       translate([1,109,3])rotate([90,0,-90])linear_extrude(2)text("@GITHUB",6);
+}
     }
 module lid(){
 
